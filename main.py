@@ -18,6 +18,9 @@ async def on_ready():
     print(time.strftime('%Y-%m-%d', time.localtime(time.time())))
     print("===========")
 
+    #봇을 온라인으로, !명령어를 입력하세요 하는중으로 변경
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("!명령어를 입력하세요"))
+
 
 # 봇에 메시지가 오면 수행 될 액션
 @client.event
